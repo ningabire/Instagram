@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  Instagram
 //
 //  Created by Norette Ingabire on 7/9/18.
@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoginViewController : UIViewController
 
-
+//- (void)registerUser;
+//- (void) loginUser;
+- (void) invalidLogin;
 @end
+
 
