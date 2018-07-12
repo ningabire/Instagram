@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SignupViewController.h
 //  InstagramApp
 //
 //  Created by Norette Ingabire on 7/11/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SignupViewController : UIViewController
 
 @end
-
