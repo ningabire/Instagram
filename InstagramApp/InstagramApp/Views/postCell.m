@@ -25,7 +25,33 @@
     _post = post;
     self.postedImage.file = post[@"image"];
     [self.postedImage loadInBackground];
-    NSLog(@"set selected image in the background");
+    self.caption.text = post.caption;
 }
 
+- (IBAction)didTapLike:(id)sender {
+    if (!self.post.liked) {
+        NSLog(@"Selected :%d", self.likeButton.selected);
+        self.post.liked = YES;
+        self.post.likeCount += 1;
+        self.likeButton.selected = YES;
+        NSLog(@"Selected after liking: %d", self.likeButton.selected);
+    }
+    
+    else {
+        self.post.liked = NO;
+        self.post.likeCount -= 1;
+        self.likeButton.selected = NO;
+    }
+    
+    [self refreshData];
+}
+
+- (IBAction)didTapComment:(id)sender {
+}
+
+- (void) refreshData {
+    NSString *numberOfLikes = [NSString stringWithFormat:@"%i", self.post.likeCount];
+    
+    self.likeCount.text = numberOfLikes;
+}
 @end

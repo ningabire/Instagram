@@ -12,7 +12,17 @@
 
 @interface postCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet PFImageView *postedImage;
-@property (weak, nonatomic) IBOutlet UITextView *caption;
 @property (strong,nonatomic) Post *post;
+@property (weak, nonatomic) IBOutlet UILabel *caption;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet UILabel *likeCount;
+@property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UILabel *commentCount;
+@property (weak, nonatomic) IBOutlet UILabel *likesString;
 
+- (IBAction)didTapLike:(id)sender;
+- (IBAction)didTapComment:(id)sender;
+
+
+- (void) refreshData;
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Post.h"
+#import "ComposeViewController.h"
 
 @protocol captureImageDelegate
 
@@ -15,8 +17,11 @@
 
 @end
 
-@interface FeedViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface FeedViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, composeViewControllerDelegate>
 
 @property (weak, nonatomic) id<captureImageDelegate> delegate;
 
+//- (void) didPost: (Post *) post;
+
+- (void) fetchPosts;
 @end

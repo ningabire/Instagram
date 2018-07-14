@@ -14,6 +14,7 @@
 @dynamic userID;
 @dynamic description;
 @dynamic image;
+@dynamic date;
 
 + (nonnull NSString *) parseClassName {
     return @"Post";
@@ -29,6 +30,7 @@
     newPost.caption = caption;
     newPost.likeCount = @(0);
     newPost.commentCount = @(0);
+    newPost.date = @"createdAt";
     
     [newPost saveInBackgroundWithBlock: completion];
 }

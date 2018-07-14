@@ -22,18 +22,18 @@
     // Initialize parse to point to my server
     ParseClientConfiguration *config = [ParseClientConfiguration   configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         
-        configuration.applicationId = @"myAppId";
-        configuration.clientKey = @"myMasterKey";
+        configuration.applicationId = @"instapplicationID";
+        configuration.clientKey = @"instapplicationMasterKey";
         configuration.server = @"https://instapplication.herokuapp.com/parse";
     }];
     
     [Parse initializeWithConfiguration:config];
     
-  /*  if (PFUser.currentUser) {
+    if (PFUser.currentUser) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TimelineViewController"];
-    }*/
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarID"];
+    }
     
    /*
     PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];

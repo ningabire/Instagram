@@ -62,9 +62,10 @@
     // call sign up function on the object
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
+            [self invalidLogin];
             NSLog(@"Error: %@", error.localizedDescription);
-        } else {
-            
+        }
+        else {
             NSLog(@"User registered successfully");
             
             // manually segue to logged in view
@@ -75,7 +76,7 @@
 
 - (void) invalidLogin {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error"
-                                                                   message:@"Please verify your username and password"
+                                                                   message:@"Please verify your signUp information"
                                                             preferredStyle:(UIAlertControllerStyleAlert)];
     // create a cancel action
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"

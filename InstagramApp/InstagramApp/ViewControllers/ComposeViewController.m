@@ -54,18 +54,19 @@
     // share Image
     [Post posterUserImage:self.imageView.image withCaption:self.captionField.text withCompletion: ^(BOOL succeeded, NSError *error) {
         if (error) {
+            
             NSLog(@"Failed to post picture : %@", error.localizedDescription);
         }
         
         else {
             NSLog(@"Successfully posted picture");
-           // [self imagePickerController:<#(UIImagePickerController *)#> didFinishPickingMediaWithInfo:<#(NSDictionary<NSString *,id> *)#>]
+             Post *newPost = [Post new];
+            [self.didPostdelegate didPost:newPost];
+            NSLog(@"just called didPost using the delegate");
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }];
 }
-
-
 
 - (void)loadCamera {
     
@@ -76,19 +77,17 @@
     imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:imagePickerVC animated:YES completion:nil];
-    NSLog(@"loaded camera");
 }
 
 - (void)loadPhotoLibrary {
     
     // Do any additional setup after loading the view.
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
-    imagePickerVC.delegate= self;
+    imagePickerVC.delegate = self;
     imagePickerVC.allowsEditing = YES;
     imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:imagePickerVC animated:YES completion:nil];
-    NSLog(@"loaded photo library");
 }
 
 
@@ -109,6 +108,7 @@
     
     // Do something with the images (based on your use case)
     
+    //resize image
     UIImage *resizedImage = [self resizeImage:editedImage withSize:editedImage.size];
     self.imageView.image = resizedImage;
     
@@ -129,4 +129,6 @@
     
     return newImage;
 }
+
+
 @end
