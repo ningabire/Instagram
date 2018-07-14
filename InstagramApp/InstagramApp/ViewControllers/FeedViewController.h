@@ -21,7 +21,6 @@
 
 @property (weak, nonatomic) id<captureImageDelegate> delegate;
 
-//- (void) didPost: (Post *) post;
 
 - (void) fetchPosts;
 @end

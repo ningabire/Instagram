@@ -149,7 +149,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.58929190109999996" green="0.18750196799999999" blue="0.61919075609999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="irP-6G-JvS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="182" id="12G-e7-pXs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Tj-sT-dxJ" secondAttribute="trailing" constant="71" id="2zx-g9-k6g"/>
@@ -299,7 +299,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ych-kA-nfN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ych-kA-nfN">
                                 <rect key="frame" x="16" y="481" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -313,7 +313,6 @@
                     <connections>
                         <outlet property="captionField" destination="ing-Oh-kNZ" id="hUf-17-Qc6"/>
                         <outlet property="imageField" destination="m5x-Em-dAW" id="EAV-BR-aSR"/>
-                        <outlet property="timestampField" destination="Ych-kA-nfN" id="5fO-vh-yTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGJ-Kh-kbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -386,7 +385,7 @@
                                     <constraint firstAttribute="height" constant="108" id="xYc-PK-atF"/>
                                 </constraints>
                             </imageView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" text="Type Caption here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iZk-jt-VlW">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iZk-jt-VlW">
                                 <rect key="frame" x="116" y="100" width="243" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -539,6 +538,6 @@
         <image name="logo_header" width="1085" height="450"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gMs-sO-z7g"/>
+        <segue reference="sT3-ug-vL3"/>
     </inferredMetricsTieBreakers>
 </document>

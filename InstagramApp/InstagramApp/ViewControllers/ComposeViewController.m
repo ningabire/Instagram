@@ -27,6 +27,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.captionField.text = @"Type your caption here...";
+    self.captionField.textColor = [UIColor lightGrayColor];
+    self.captionField.delegate = self;
+}
+- (BOOL) textViewShouldBeginEditing:(UITextView *)textView
+{
+    self.captionField.text = @"";
+    self.captionField.textColor = [UIColor blackColor];
+    return YES;
+}
+
+-(void) textViewDidChange:(UITextView *)textView
+{
+    
+    if (self.captionField.text.length == 0) {
+        self.captionField.textColor = [UIColor lightGrayColor];
+        self.captionField.text = @"Type your caption here...";
+        [self.captionField resignFirstResponder];
+    }
+}
+
+-(void) textViewShouldEndEditing:(UITextView *)textView
+{
+    
+    if(self.captionField .text.length == 0){
+        self.captionField .textColor = [UIColor lightGrayColor];
+        self.captionField .text = @"Type your caption here...";
+        [self.captionField  resignFirstResponder];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
